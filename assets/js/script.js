@@ -22,17 +22,6 @@ var input3 = document.querySelector("#input3");
 var input4 = document.querySelector("#input4");
 var input5 = document.querySelector("#input5");
 
-// var task9 = [];
-// var task10 = [];
-// var task11 = [];
-// var task12 = [];
-// var task1 = [];
-// var task2 = [];
-// var task3 = [];
-// var task4 = [];
-// var task5 = [];
-
-
 
 // current day timestamp
 var currentDay = moment().format("dddd, MMMM Do YYYY");
