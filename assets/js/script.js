@@ -1,17 +1,6 @@
 window.onload = write9am(), write10am(), write11am(), write12pm(), write1pm(), write2pm(), write3pm(), write4pm(), write5pm();
 
 // global variables
-var saveBtn9 = document.querySelector(".saveBtn9");
-var saveBtn10 = document.querySelector(".saveBtn10");
-var saveBtn11 = document.querySelector(".saveBtn11");
-var saveBtn12 = document.querySelector(".saveBtn12");
-var saveBtn1 = document.querySelector(".saveBtn1");
-var saveBtn2 = document.querySelector(".saveBtn2");
-var saveBtn3 = document.querySelector(".saveBtn3");
-var saveBtn4 = document.querySelector(".saveBtn4");
-var saveBtn5 = document.querySelector(".saveBtn5");
-var clearBtn = document.querySelector("#clear");
-
 var input9 = document.querySelector("#input9");
 var input10 = document.querySelector("#input10");
 var input11 = document.querySelector("#input11");
@@ -184,7 +173,8 @@ function write9am () {
 }
 
 // saves 9am task to local storage
-saveBtn9.addEventListener("click", save9AM, write9am);
+$(".saveBtn9").click(save9AM);
+$(".saveBtn9").click(write9am);
 
 
 // 10am saving to local storage
@@ -198,7 +188,8 @@ function write10am () {
     $("#input10").val(saveTask10);
 }
 
-saveBtn10.addEventListener("click", save10AM, write10am);
+$(".saveBtn10").click(save10AM);
+$(".saveBtn10").click(write10am);
 
 
 // 11am saving to local storage
@@ -212,7 +203,9 @@ function write11am () {
     $("#input11").val(saveTask11);
 }
 
-saveBtn11.addEventListener("click", save11AM, write11am);
+$(".saveBtn11").click(save11AM);
+$(".saveBtn11").click(write11am);
+
     
     
 // 12pm saving to local storage
@@ -226,7 +219,9 @@ function write12pm () {
     $("#input12").val(saveTask12);
 }
 
-saveBtn12.addEventListener("click", save12PM, write12pm);
+$(".saveBtn12").click(save12PM);
+$(".saveBtn12").click(write12pm);
+
 
 
 // 1pm saving to local storage
@@ -240,7 +235,8 @@ function write1pm () {
     $("#input1").val(saveTask1);
 }
 
-saveBtn1.addEventListener("click", save1PM, write1pm);
+$(".saveBtn1").click(save1PM);
+$(".saveBtn1").click(write1pm);
   
 
 // 2pm saving to local storage
@@ -254,7 +250,8 @@ function write2pm () {
     $("#input2").val(saveTask2);
 }
 
-saveBtn2.addEventListener("click", save2PM, write2pm);
+$(".saveBtn2").click(save2PM);
+$(".saveBtn2").click(write2pm);
     
 
 // 3pm saving to local storage
@@ -268,7 +265,8 @@ function write3pm () {
     $("#input3").val(saveTask3);
 }
 
-saveBtn3.addEventListener("click", save3PM, write3pm);
+$(".saveBtn3").click(save3PM);
+$(".saveBtn3").click(write3pm);
     
 
 // 4pm saving to local storage
@@ -282,7 +280,8 @@ function write4pm () {
     $("#input4").val(saveTask4);
 }
 
-saveBtn4.addEventListener("click", save4PM, write4pm);
+$(".saveBtn4").click(save4PM);
+$(".saveBtn4").click(write4pm);
   
 
 // 5pm saving to local storage
@@ -296,7 +295,8 @@ function write5pm () {
     $("#input5").val(saveTask5);
 }
 
-saveBtn5.addEventListener("click", save5PM, write5pm);
+$(".saveBtn5").click(save5PM);
+$(".saveBtn5").click(write5pm);
     
 
 function clearSchedule () {
@@ -304,4 +304,4 @@ function clearSchedule () {
     location.reload();
 }
 
-clearBtn.addEventListener("click", clearSchedule);
+$("#clear").click(clearSchedule);
