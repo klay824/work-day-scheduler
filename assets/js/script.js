@@ -10,6 +10,7 @@ var saveBtn2 = document.querySelector(".saveBtn2");
 var saveBtn3 = document.querySelector(".saveBtn3");
 var saveBtn4 = document.querySelector(".saveBtn4");
 var saveBtn5 = document.querySelector(".saveBtn5");
+var clearBtn = document.querySelector("#clear");
 
 var input9 = document.querySelector("#input9");
 var input10 = document.querySelector("#input10");
@@ -193,6 +194,12 @@ function write9am () {
     $("#input9").val(saveTask9);
 }
 
+// // when user clicks in text area, it clears local storage
+// function clearTask9 () {
+//     localStorage.removeItem("task9");
+// }
+
+// saves 9am task to local storage
 saveBtn9.addEventListener("click", function(){
     
     var taskText9 = input9.value.trim();
@@ -204,11 +211,13 @@ saveBtn9.addEventListener("click", function(){
     task9.push(taskText9);
     input9.value = "";
 
-    
-
     save9AM();
     write9am();
 });
+
+// // clears local storage when user clicks on the textarea
+// input9.addEventListener("click", clearTask9);
+
 
 // 10am saving to local storage
 function save10AM () {
@@ -417,3 +426,10 @@ saveBtn5.addEventListener("click", function() {
     save5PM();
     write5pm();
 })
+
+function clearSchedule () {
+    localStorage.clear();
+    location.reload();
+}
+
+clearBtn.addEventListener("click", clearSchedule);
