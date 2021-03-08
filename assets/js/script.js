@@ -1,3 +1,5 @@
+window.onload = write9am(), write10am(), write11am(), write12pm(), write1pm(), write2pm(), write3pm(), write4pm(), write5pm();
+
 // global variables
 var saveBtn9 = document.querySelector(".saveBtn9");
 var saveBtn10 = document.querySelector(".saveBtn10");
