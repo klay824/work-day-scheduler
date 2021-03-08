@@ -17,7 +17,7 @@ var currentDay = moment().format("dddd, MMMM Do YYYY");
 
 $("#currentDay").text(currentDay);
 
-// depending on time of day, background of hour will be gray (past), red (current), or green (future)
+// sets the current hour equal to currentTime variable
 var currentTime = moment().hour();
 
 // function to change textarea background color depending on time of day
