@@ -183,8 +183,7 @@ timeColors();
 
 
 // 9am saving to local storage
-function save9AM () {
-    
+function save9AM () {    
     localStorage.setItem("task9", JSON.stringify(task9));
 }
 
@@ -194,9 +193,8 @@ function write9am () {
     $("#input9").val(saveTask9);
 }
 
-saveBtn9.addEventListener("click", function(event){
-    event.preventDefault();
-
+saveBtn9.addEventListener("click", function(){
+    
     var taskText9 = input9.value.trim();
 
     if(taskText9 === "") {
@@ -223,9 +221,8 @@ function write10am () {
     $("#input10").val(saveTask10);
 }
 
-saveBtn10.addEventListener("click", function(event) {
-    event.preventDefault();
-
+saveBtn10.addEventListener("click", function() {
+    
     var taskText10 = input10.value.trim();
 
     if(taskText10 === "") {
@@ -250,9 +247,8 @@ function write11am () {
     $("#input11").val(saveTask11);
 }
 
-saveBtn11.addEventListener("click", function(event) {
-    event.preventDefault();
-
+saveBtn11.addEventListener("click", function() {
+    
     var taskText11 = input11.value.trim();
 
     if(taskText11 === "") {
@@ -277,9 +273,8 @@ function write12pm () {
     $("#input12").val(saveTask12);
 }
 
-saveBtn12.addEventListener("click", function(event) {
-    event.preventDefault();
-
+saveBtn12.addEventListener("click", function() {
+    
     var taskText12 = input12.value.trim();
 
     if(taskText12 === "") {
@@ -304,9 +299,8 @@ function write1pm () {
     $("#input1").val(saveTask1);
 }
 
-saveBtn1.addEventListener("click", function(event) {
-    event.preventDefault();
-
+saveBtn1.addEventListener("click", function() {
+    
     var taskText1 = input1.value.trim();
 
     if(taskText1 === "") {
@@ -331,9 +325,8 @@ function write2pm () {
     $("#input2").val(saveTask2);
 }
 
-saveBtn2.addEventListener("click", function(event) {
-    event.preventDefault();
-
+saveBtn2.addEventListener("click", function() {
+    
     var taskText2 = input2.value.trim();
 
     if(taskText2 === "") {
@@ -358,9 +351,8 @@ function write3pm () {
     $("#input3").val(saveTask3);
 }
 
-saveBtn3.addEventListener("click", function(event) {
-    event.preventDefault();
-
+saveBtn3.addEventListener("click", function() {
+    
     var taskText3 = input3.value.trim();
 
     if(taskText3 === "") {
@@ -385,9 +377,8 @@ function write4pm () {
     $("#input4").val(saveTask4);
 }
 
-saveBtn4.addEventListener("click", function(event) {
-    event.preventDefault();
-
+saveBtn4.addEventListener("click", function() {
+    
     var taskText4 = input4.value.trim();
 
     if(taskText4 === "") {
@@ -412,9 +403,8 @@ function write5pm () {
     $("#input5").val(saveTask5);
 }
 
-saveBtn5.addEventListener("click", function(event) {
-    event.preventDefault();
-
+saveBtn5.addEventListener("click", function() {
+    
     var taskText5 = input5.value.trim();
 
     if(taskText5 === "") {
