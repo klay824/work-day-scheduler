@@ -66,7 +66,7 @@ button {
   color: white;
 }
 
-button {
+#btn {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -75,7 +75,19 @@ button {
   color: white;
 }
 
-button:hover {
+#btn:hover {
+  font-size: 20px;
+  transition: all .3s ease-in-out;
+}
+
+#clear {
+  background-color: #06AED5;
+  color: white;
+  height: 50px;
+  width: 100px;
+}
+
+#clear:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
 }
