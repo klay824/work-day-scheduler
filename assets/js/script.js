@@ -22,15 +22,15 @@ var input3 = document.querySelector("#input3");
 var input4 = document.querySelector("#input4");
 var input5 = document.querySelector("#input5");
 
-var task9 = [];
-var task10 = [];
-var task11 = [];
-var task12 = [];
-var task1 = [];
-var task2 = [];
-var task3 = [];
-var task4 = [];
-var task5 = [];
+// var task9 = [];
+// var task10 = [];
+// var task11 = [];
+// var task12 = [];
+// var task1 = [];
+// var task2 = [];
+// var task3 = [];
+// var task4 = [];
+// var task5 = [];
 
 
 
@@ -185,7 +185,7 @@ timeColors();
 
 // 9am saving to local storage
 function save9AM () {  
-    localStorage.setItem("task9", JSON.stringify(task9));
+    localStorage.setItem("task9", JSON.stringify(input9.value));
 }
 
 // to write to the text area from local storage
@@ -194,34 +194,13 @@ function write9am () {
     $("#input9").val(saveTask9);
 }
 
-// // when user clicks in text area, it clears local storage
-// function clearTask9 () {
-//     localStorage.removeItem("task9");
-// }
-
 // saves 9am task to local storage
-saveBtn9.addEventListener("click", function(){
-    
-    var taskText9 = input9.value.trim();
-
-    if(taskText9 === "") {
-        return;
-    }
-
-    task9.push(taskText9);
-    input9.value = "";
-
-    save9AM();
-    write9am();
-});
-
-// // clears local storage when user clicks on the textarea
-// input9.addEventListener("click", clearTask9);
+saveBtn9.addEventListener("click", save9AM, write9am);
 
 
 // 10am saving to local storage
 function save10AM () {
-    localStorage.setItem("task10", JSON.stringify(task10));
+    localStorage.setItem("task10", JSON.stringify(input10.value));
 }
 
 // to write to the text area from local storage
@@ -230,24 +209,12 @@ function write10am () {
     $("#input10").val(saveTask10);
 }
 
-saveBtn10.addEventListener("click", function() {
-    
-    var taskText10 = input10.value.trim();
+saveBtn10.addEventListener("click", save10AM, write10am);
 
-    if(taskText10 === "") {
-        return;
-    }
-
-    task10.push(taskText10);
-    input10.value = "";
-
-    save10AM();
-    write10am();
-})
 
 // 11am saving to local storage
 function save11AM () {
-    localStorage.setItem("task11", JSON.stringify(task11));
+    localStorage.setItem("task11", JSON.stringify(input11.value));
 }
 
 // to write to the text area from local storage
@@ -256,24 +223,12 @@ function write11am () {
     $("#input11").val(saveTask11);
 }
 
-saveBtn11.addEventListener("click", function() {
+saveBtn11.addEventListener("click", save11AM, write11am);
     
-    var taskText11 = input11.value.trim();
-
-    if(taskText11 === "") {
-        return;
-    }
-
-    task11.push(taskText11);
-    input11.value = "";
-
-    save11AM();
-    write11am();
-})
-
+    
 // 12pm saving to local storage
 function save12PM () {
-    localStorage.setItem("task12", JSON.stringify(task12));
+    localStorage.setItem("task12", JSON.stringify(input12.value));
 }
 
 // to write to the text area from local storage
@@ -282,24 +237,12 @@ function write12pm () {
     $("#input12").val(saveTask12);
 }
 
-saveBtn12.addEventListener("click", function() {
-    
-    var taskText12 = input12.value.trim();
+saveBtn12.addEventListener("click", save12PM, write12pm);
 
-    if(taskText12 === "") {
-        return;
-    }
-
-    task12.push(taskText12);
-    input12.value = "";
-
-    save12PM();
-    write12pm();
-})
 
 // 1pm saving to local storage
 function save1PM () {
-    localStorage.setItem("task1", JSON.stringify(task1));
+    localStorage.setItem("task1", JSON.stringify(input1.value));
 }
 
 // to write to the text area from local storage
@@ -308,24 +251,12 @@ function write1pm () {
     $("#input1").val(saveTask1);
 }
 
-saveBtn1.addEventListener("click", function() {
-    
-    var taskText1 = input1.value.trim();
-
-    if(taskText1 === "") {
-        return;
-    }
-
-    task1.push(taskText1);
-    input1.value = "";
-
-    save1PM();
-    write1pm();
-})
+saveBtn1.addEventListener("click", save1PM, write1pm);
+  
 
 // 2pm saving to local storage
 function save2PM () {
-    localStorage.setItem("task2", JSON.stringify(task2));
+    localStorage.setItem("task2", JSON.stringify(input2.value));
 }
 
 // to write to the text area from local storage
@@ -334,24 +265,12 @@ function write2pm () {
     $("#input2").val(saveTask2);
 }
 
-saveBtn2.addEventListener("click", function() {
+saveBtn2.addEventListener("click", save2PM, write2pm);
     
-    var taskText2 = input2.value.trim();
-
-    if(taskText2 === "") {
-        return;
-    }
-
-    task2.push(taskText2);
-    input2.value = "";
-
-    save2PM();
-    write2pm();
-})
 
 // 3pm saving to local storage
 function save3PM () {
-    localStorage.setItem("task3", JSON.stringify(task3));
+    localStorage.setItem("task3", JSON.stringify(input3.value));
 }
 
 // to write to the text area from local storage
@@ -360,24 +279,12 @@ function write3pm () {
     $("#input3").val(saveTask3);
 }
 
-saveBtn3.addEventListener("click", function() {
+saveBtn3.addEventListener("click", save3PM, write3pm);
     
-    var taskText3 = input3.value.trim();
-
-    if(taskText3 === "") {
-        return;
-    }
-
-    task3.push(taskText3);
-    input3.value = "";
-
-    save3PM();
-    write3pm();
-})
 
 // 4pm saving to local storage
 function save4PM () {
-    localStorage.setItem("task4", JSON.stringify(task4));
+    localStorage.setItem("task4", JSON.stringify(input4.value));
 }
 
 // to write to the text area from local storage
@@ -386,24 +293,12 @@ function write4pm () {
     $("#input4").val(saveTask4);
 }
 
-saveBtn4.addEventListener("click", function() {
-    
-    var taskText4 = input4.value.trim();
-
-    if(taskText4 === "") {
-        return;
-    }
-
-    task4.push(taskText4);
-    input4.value = "";
-
-    save4PM();
-    write4pm();
-})
+saveBtn4.addEventListener("click", save4PM, write4pm);
+  
 
 // 5pm saving to local storage
 function save5PM () {
-    localStorage.setItem("task5", JSON.stringify(task5));
+    localStorage.setItem("task5", JSON.stringify(input5.value));
 }
 
 // to write to the text area from local storage
@@ -412,20 +307,8 @@ function write5pm () {
     $("#input5").val(saveTask5);
 }
 
-saveBtn5.addEventListener("click", function() {
+saveBtn5.addEventListener("click", save5PM, write5pm);
     
-    var taskText5 = input5.value.trim();
-
-    if(taskText5 === "") {
-        return;
-    }
-
-    task5.push(taskText5);
-    input5.value = "";
-
-    save5PM();
-    write5pm();
-})
 
 function clearSchedule () {
     localStorage.clear();
