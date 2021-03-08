@@ -21,9 +21,14 @@ textarea{
   border-bottom: 10px solid black;
 }
 
-input {
+textarea {
   width: 900px;
   border: none;
+}
+
+button {
+  height: 60px;
+  width: 60px;
 }
 
 .description{
