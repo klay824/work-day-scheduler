@@ -1,3 +1,4 @@
+// if there are tasks in local storage, they will be written to their time slot upon refresh
 window.onload = write9am(), write10am(), write11am(), write12pm(), write1pm(), write2pm(), write3pm(), write4pm(), write5pm();
 
 // global variables
@@ -20,140 +21,93 @@ $("#currentDay").text(currentDay);
 // sets the current hour equal to currentTime variable
 var currentTime = moment().hour();
 
+
+// // Trying alternate method to change time block colors
+// $(".time-block").each(function() {
+//     var currentElement = $("id");
+//     console.log(currentElement);
+// })
+
 // function to change textarea background color depending on time of day
 function timeColors () {
-    // gray if 9am is in the past
+    // 9am
     if(currentTime > 9) {
         $("#input9").addClass("past");
-    } 
-    
-    // red if the current hour is 9am
-    if (currentTime == 9) {
+    } else if (currentTime == 9) {
         $("#input9").addClass("present");
-    } 
-    
-    // green if 9am is in the future
-    if (currentTime < 9) {
+    } else {
         $("#input9").addClass("future");
     }
-
-    // gray if 10am is in the past
+    
+    // 10am
     if(currentTime > 10) {
         $("#input10").addClass("past");
-    }
-
-    // red if 10am is the current hour
-    if(currentTime == 10) {
+    } else if (currentTime == 10) {
         $("#input10").addClass("present");
-    }
-
-    // green if 10am is in the future
-    if(currentTime < 10) {
+    } else {
         $("#input10").addClass("future");
     }
-
-    // gray if 11am is in the past
+    
+    // 11am
     if(currentTime > 11) {
         $("#input11").addClass("past");
-    }
-
-    // red if 11am is the current hour
-    if(currentTime == 11) {
+    } else if (currentTime == 11) {
         $("#input11").addClass("present");
-    }
-
-    // green if 11am is in the future
-    if(currentTime < 11) {
+    } else {
         $("#input11").addClass("future");
     }
 
-    // gray if 12pm is in the past
+    // 12pm
     if(currentTime > 12) {
         $("#input12").addClass("past");
-    }
-
-    // red if 12pm is the current time
-    if(currentTime == 12) {
+    } else if (currentTime == 12) {
         $("#input12").addClass("present");
-    }
-
-    // green if 12pm is in the future
-    if(currentTime < 12) {
+    } else {
         $("#input12").addClass("future");
     }
 
-    // gray if 1pm is in the past
+    // 1pm
     if(currentTime > 13) { /*13 because this is a 24 hour clock */
         $("#input1").addClass("past");
-    }
-
-    // red if 1pm is the current hour
-    if(currentTime == 13) {
+    } else if (currentTime == 13) {
         $("#input1").addClass("present");
-    }
-
-    // green if 1pm is in the future
-    if(currentTime < 13) {
+    } else {
         $("#input1").addClass("future");
     }
 
-    // gray if 2pm is in the past
+    // 2pm
     if(currentTime > 14) {
         $("#input2").addClass("past");
-    }
-
-    // red if 2pm is the current hour
-    if(currentTime == 14) {
+    } else if (currentTime == 14) {
         $("#input2").addClass("present");
-    }
-
-    // green if 2pm is in the future
-    if(currentTime < 14) {
+    } else {
         $("#input2").addClass("future");
     }
 
-    // gray if 3pm is in the past
+    // 3pm
     if(currentTime > 15) {
         $("#input3").addClass("past");
-    }
-
-    // red if 3pm is the current hour
-    if(currentTime == 15) {
+    } else if (currentTime == 15) {
         $("#input3").addClass("present");
-    }
-
-    // green if 3pm is in the future
-    if(currentTime < 15) {
+    } else {
         $("#input3").addClass("future");
     }
 
-    // gray if 4pm is in the past
+    // 4pm
     if(currentTime > 16) {
         $("#input4").addClass("past");
-    }
-
-    // red if 4pm is the current hour
-    if(currentTime == 16) {
+    } else if (currentTime == 16) {
         $("#input4").addClass("present");
-    }
-
-    // green if 4pm is in the future
-    if(currentTime < 16) {
+    } else {
         $("#input4").addClass("future");
     }
 
-    // gray if 5pm is in the past
+    // 5pm
     if(currentTime > 17) {
         $("#input5").addClass("past");
-    }
-
-    // red if 5pm is the current hour
-    if(currentTime == 17) {
+    } else if (currentTime == 17) {
         $("#input5").addClass("present");
-    }
-
-    // green if 5pm is in the future
-    if(currentTime < 17) {
+    } else {
         $("#input5").addClass("future");
     }
 }
